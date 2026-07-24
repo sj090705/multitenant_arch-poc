@@ -1,0 +1,69 @@
+{
+  "abc": {
+    "id": "abc",
+    "name": "ABC Industries",
+    "plan": "enterprise",
+    "theme": {
+      "primary": "#2563eb",
+      "accent": "#1e40af",
+      "logo": "🔷"
+    },
+    "modules": ["dashboard", "analytics", "settings"],
+    "flags": {
+      "dashboard.revenueWidget": true,
+      "dashboard.conversionWidget": true,
+      "dashboard.ticketsWidget": true,
+      "dashboard.signupsWidget": true,
+      "dashboard.churnWidget": true,
+      "dashboard.activityFeed": true,
+      "analytics.csvExport": true,
+      "analytics.realtime": true,
+      "settings.betaSecurityPanel": true,
+      "settings.apiKeys": true
+    }
+  },
+  "xyz": {
+    "id": "xyz",
+    "name": "XYZ Corporation",
+    "plan": "pro",
+    "theme": {
+      "primary": "#16a34a",
+      "accent": "#15803d",
+      "logo": "🟢"
+    },
+    "modules": ["dashboard", "settings"],
+    "flags": {
+      "dashboard.revenueWidget": true,
+      "dashboard.conversionWidget": true,
+      "dashboard.ticketsWidget": false,
+      "dashboard.signupsWidget": true,
+      "dashboard.churnWidget": false,
+      "dashboard.activityFeed": false,
+      "settings.betaSecurityPanel": false,
+      "settings.apiKeys": true
+    }
+  },
+  "pqr": {
+    "id": "pqr",
+    "name": "PQR Group",
+    "plan": "starter",
+    "theme": {
+      "primary": "#db2777",
+      "accent": "#9d174d",
+      "logo": "🔺"
+    },
+    "modules": ["dashboard", "analytics", "settings"],
+    "flags": {
+      "dashboard.revenueWidget": false,
+      "dashboard.conversionWidget": false,
+      "dashboard.ticketsWidget": true,
+      "dashboard.signupsWidget": false,
+      "dashboard.churnWidget": false,
+      "dashboard.activityFeed": true,
+      "analytics.csvExport": false,
+      "analytics.realtime": false,
+      "settings.betaSecurityPanel": false,
+      "settings.apiKeys": false
+    }
+  }
+}

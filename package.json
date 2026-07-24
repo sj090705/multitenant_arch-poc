@@ -1,0 +1,17 @@
+{
+  "name": "multitenant-mfe-poc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Micro-frontend multitenant POC: Vite + Module Federation, React, per-tenant feature flags via local JSON config.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=dashboard && npm run build --workspace=analytics && npm run build --workspace=settings && npm run build --workspace=shell",
+    "start": "npm run build && concurrently -n dashboard,analytics,settings,shell -c blue,magenta,cyan,green \"npm run preview --workspace=dashboard\" \"npm run preview --workspace=analytics\" \"npm run preview --workspace=settings\" \"npm run preview --workspace=shell\"",
+    "dev": "npm run build --workspace=dashboard && npm run build --workspace=analytics && npm run build --workspace=settings && concurrently -n dashboard,analytics,settings,shell -c blue,magenta,cyan,green \"npm run preview --workspace=dashboard\" \"npm run preview --workspace=analytics\" \"npm run preview --workspace=settings\" \"npm run dev --workspace=shell\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
